@@ -1,0 +1,133 @@
+% Basic LaTex structure from MNRAS template on Overleaf
+\documentclass[fleqn, usenatbib]{mnras}
+\usepackage{newtxtext,newtxmath}
+% Depending on your LaTeX fonts installation, you might get better results with one of these:
+%\usepackage{mathptmx}
+%\usepackage{txfonts}
+
+\usepackage[T1]{fontenc}
+\usepackage{ae,aecompl}
+
+
+%%%%% AUTHORS - PLACE YOUR OWN PACKAGES HERE %%%%%
+
+% Only include extra packages if you really need them. Common packages are:
+\usepackage{graphicx}	% Including figure files
+\usepackage{amsmath}	% Advanced maths commands
+\usepackage{amssymb}	% Extra maths symbols
+\usepackage{amsfonts}
+\usepackage[flushleft]{threeparttable}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{caption}
+\usepackage{morefloats}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%% AUTHORS - PLACE YOUR OWN COMMANDS HERE %%%%%
+
+% Please keep new commands to a minimum, and use \newcommand not \def to avoid
+% overwriting existing commands. Example:
+%\newcommand{\pcm}{\,cm$^{-2}$}	% per cm-squared
+\newcommand{\herschel}{\emph{Herschel}}
+\newcommand{\swift}{\textit{Swift}}
+\newcommand{\msun}{M$_{\sun}$}
+\newcommand{\mstar}{$M_{\mathrm{star}}$}
+\newcommand{\lsun}{L$_{\sun}$}
+\newcommand{\mdust}{$M_{\rm dust}$}
+\newcommand{\tdust}{$T_{\rm dust}$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%% TITLE PAGE %%%%%%%%%%%%%%%%%%%
+
+% Title of the paper, and the short title which is used in the headers.
+% Keep the title short and informative.
+\title[Short Title]{Long Title}
+
+% The list of authors, and the short list which is used in the headers.
+% If you need two or more lines of authors, add an extra line using \newauthor
+\author[Short Author]{T. Taro Shimizu$^{1}$\thanks{Email: shimizu@mpe.mpg.de}, Author 2$^{2}\\
+$^{1}$Max-Planck-Institut f\"{u}r extraterrestrische Physik, Postfach 1312, 85741, Garching, Germany\\
+$^{2}$Instituion 2
+
+% These dates will be filled out by the publisher
+\date{Accepted XXX. Received YYY; in original form ZZZ}
+
+% Enter the current year, for the copyright statements etc.
+\pubyear{2017}
+
+% Don't change these lines
+\begin{document}
+\label{firstpage}
+\pagerange{\pageref{firstpage}--\pageref{lastpage}}
+\maketitle
+
+% Abstract of the paper
+\begin{abstract}
+\end{abstract}
+
+% Select between one and six entries from the list of approved keywords.
+% Don't make up new ones.
+\begin{keywords}
+galaxies: active -- galaxies: Seyfert -- infrared: galaxies -- galaxies: star formation -- galaxies: evolution 
+\end{keywords}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%% BODY OF PAPER %%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Introduction}
+
+\section{Section 2}
+
+%%%%%%%%%%%%%%%%% EXAMPLE FIGURE%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{figure}
+%\includegraphics[width=\columnwidth]{figures/fagn_nonAGN_hrs_mass_select}
+%\caption{$f_{\rm AGN}$ distribution for HRS. The standard deviation of this distribution quantifies the uncertainty on $f_{\rm AGN}$ associated with the correction factor used to calculate $f_{\rm AGN}$. A color version of this figure is available in the online publication. \label{fig:fagn_nonAGN}}
+%\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Section 3}
+
+%%%%%%%%%%%%%%%%% EXAMPLE TABLE%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{table*}
+\begin{threeparttable}
+\captionsetup{font=small,labelfont=bf,labelsep=period}
+\caption{Linear Regression Between Flux Ratios and $f_{\rm AGN}$\label{tab:flux_ratio_fagn_linreg}}
+\begin{tabular}{lccccccc}
+\toprule 
+$F_{1}/F_{2}$ & $m$ & $b$  & $\sigma_{\rm int}$ & $\rho$ & 75th \%tile  & 50th \%tile  & 25th \%tile\\
+&&&&&(\%tile for HRS)&(\%tile for HRS)&(\%tile for HRS)\\
+\midrule
+12/70      & $0.67\pm0.04$ & $1.02\pm0.03$ & $0.016\pm0.004$ & $0.89\pm0.02$ & -1.23 (90) & -0.97 (50) & -0.66 (21)\\
+12/160    & $0.58\pm0.02$ & $1.05\pm0.03$ & $0.002\pm0.002$ & $0.99\pm0.01$ & -1.51 (31) & -1.21 (5.2) & -0.85 (2.2)\\
+12/250    & $0.51\pm0.03$ & $0.84\pm0.03$ & $0.019\pm0.004$ & $0.87\pm0.03$ & -1.22 (28) &  -0.91 (5.2) & -0.57 (1.5)\\
+22/70      & $0.79\pm0.03$ & $0.86\pm0.02$ & $0.001\pm0.001$ & $0.99\pm0.01$ & -0.89 (32) & -0.60 (16) & -0.32 (12)\\
+22/160    & $0.58\pm0.02$ & $0.85\pm0.02$ & $0.0004\pm0.0005$ & $0.997\pm0.003$ & -1.14 (5.6) & 0.83 (1.2) & -0.45 (0)\\
+22/250    & $0.49\pm0.03$ & $0.65\pm0.02$ & $0.016\pm0.004$ & $0.90\pm0.02$ & 0.87 (6.8) & -0.51 (0.02) & -0.18 (0) \\
+\bottomrule
+\end{tabular}
+\end{threeparttable}
+\end{table*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Discussion}
+
+\section{Summary and Conclusions}
+
+\section*{Acknowledgements}
+This research has made use of the NASA/IPAC Extragalactic Database (NED), which is operated by the Jet Propulsion Laboratory, California Institute of Technology, under contract with the National Aeronautics and Space Administration. This research made use of Astropy, a community-developed core Python package for Astronomy \citep{Astropy:2013ek}. Figures in this publication were created with the Python package \textsc{MATPLOTLIB} \citep{Hunter:2007}. 
+
+%%%%%%%%%%%%%%%%%%%% REFERENCES %%%%%%%%%%%%%%%%%%
+
+% The best way to enter references is to use BibTeX:
+\bibliographystyle{mnras}
+\bibliography{/Users/ttshimiz/Dropbox/Research/my_bib
+
+\appendix
+\section{Appendix 1}
+\section{Appendix 2}
+
+% Don't change these lines
+\bsp	% typesetting comment
+\label{lastpage}
+\end{document}
